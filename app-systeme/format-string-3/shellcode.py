@@ -26,7 +26,7 @@ str_addr | nop | shellcode | string = shellcode addr |
 
 str_alignment = 1
 
-precision = 0x300
+precision = 0x1000
 nb_str_addr   = (precision*2) /4
 nb_nop        = precision*2 + (128-len(shellcode))
 nb_shell_addr = (0x500+2*precision)/4
